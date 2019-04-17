@@ -8,10 +8,35 @@ import org.apache.commons.cli.ParseException;
 
 import arguments.ArgumentParser;
 import arguments.Arguments;
+import services.*;
 
 import com.google.inject.*;
 
 public class LogicFramework {
+
+    private Generator generator;
+    private Solver solver;
+    private Verifier verifier;
+
+    @Inject
+    public LogicFramework(Generator generator, Solver solver, Verifier verifier) {
+        this.generator = generator;
+        this.solver = solver;
+        this.verifier = verifier;
+    }
+
+    public void generateInput() {
+        
+    }
+
+    public void solveInput() {
+        
+    }
+
+    public void verifyOutput() {
+        
+    }
+
     public static void main(String[] args) {
         
         try {
@@ -21,17 +46,19 @@ public class LogicFramework {
                 printHelp(arguments.getPossibleOptions());
 
             else {
+                Injector injector = Guice.createInjector(new InjectorModule());
+                LogicFramework logicFramework = injector.getInstance(LogicFramework.class);
 
                 if(arguments.generateInput()) {
-
+                    logicFramework.generateInput();
                 }
 
                 if(arguments.solveInput()) {
-
+                    logicFramework.solveInput();
                 }
 
                 if(arguments.verifyOutput()) {
-
+                    logicFramework.verifyOutput();
                 }
 
             }

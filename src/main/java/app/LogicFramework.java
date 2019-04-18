@@ -7,6 +7,7 @@ import org.apache.commons.cli.ParseException;
 import arguments.ArgumentParser;
 import arguments.Arguments;
 import interfaces.*;
+import services.InjectorModule;
 
 import com.google.inject.*;
 
@@ -57,18 +58,21 @@ public class LogicFramework {
         System.out.println("GENERATING INPUT");
         System.out.println("================");
         generator.generateInput();
+        System.out.println();
     }
 
     public void solveInput() {
         System.out.println("SOLVING");
         System.out.println("=======");
         solver.solveInput();
+        System.out.println();
     }
 
     public void verifyOutput() {
         System.out.println("VERIFYING OUTPUT");
         System.out.println("=========");
         verifier.verifyOutput();
+        System.out.println();
     }
 
     private static void printHelp(Options options) {

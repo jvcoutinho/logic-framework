@@ -2,6 +2,6 @@ package interfaces;
 
 public interface Verifier {
 
-    public void verifyOutput();
+    public abstract void verifyOutput();
     
 }

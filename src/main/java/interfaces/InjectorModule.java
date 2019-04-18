@@ -1,4 +1,4 @@
-package services;
+package interfaces;
 
 import com.google.inject.AbstractModule;
 

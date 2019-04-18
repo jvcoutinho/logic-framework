@@ -1,4 +1,4 @@
-package services;
+package interfaces;
 
 public interface Generator {
 

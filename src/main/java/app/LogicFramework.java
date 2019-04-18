@@ -25,20 +25,8 @@ public class LogicFramework {
         this.verifier = verifier;
     }
 
-    public void generateInput() {
-        
-    }
-
-    public void solveInput() {
-        
-    }
-
-    public void verifyOutput() {
-        
-    }
-
     public static void main(String[] args) {
-        
+
         try {
             Arguments arguments = ArgumentParser.parse(args);
 
@@ -49,17 +37,14 @@ public class LogicFramework {
                 Injector injector = Guice.createInjector(new InjectorModule());
                 LogicFramework logicFramework = injector.getInstance(LogicFramework.class);
 
-                if(arguments.generateInput()) {
+                if (arguments.generateInput())
                     logicFramework.generateInput();
-                }
 
-                if(arguments.solveInput()) {
+                if (arguments.solveInput())
                     logicFramework.solveInput();
-                }
 
-                if(arguments.verifyOutput()) {
+                if (arguments.verifyOutput())
                     logicFramework.verifyOutput();
-                }
 
             }
 
@@ -68,6 +53,24 @@ public class LogicFramework {
             System.out.println("Run with --help to check possible arguments.");
         }
 
+    }
+
+    public void generateInput() {
+        System.out.println("GENERATING INPUT");
+        System.out.println("================");
+        generator.generateInput();
+    }
+
+    public void solveInput() {
+        System.out.println("SOLVING");
+        System.out.println("=======");
+        solver.solveInput();
+    }
+
+    public void verifyOutput() {
+        System.out.println("VERIFYING OUTPUT");
+        System.out.println("=========");
+        verifier.verifyOutput();
     }
 
     private static void printHelp(Options options) {

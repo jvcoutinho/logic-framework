@@ -6,8 +6,6 @@ import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
 public class ArgumentParser {
-
-    private static Options options;
   
     public static Arguments parse(String[] args) throws ParseException {
         Options options = buildOptions();

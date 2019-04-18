@@ -1,7 +1,6 @@
 package grammar;
 
 import java.util.List;
-import java.util.regex.Pattern;
 
 public class Rule {
     private Variable variable;

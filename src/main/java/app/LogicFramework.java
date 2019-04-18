@@ -58,21 +58,21 @@ public class LogicFramework {
         System.out.println("GENERATING INPUT");
         System.out.println("================");
         generator.generateInput();
-        System.out.println();
+        System.out.println("Done.\n");
     }
 
     public void solveInput() {
         System.out.println("SOLVING");
         System.out.println("=======");
         solver.solveInput();
-        System.out.println();
+        System.out.println("Done.\n");
     }
 
     public void verifyOutput() {
         System.out.println("VERIFYING OUTPUT");
         System.out.println("=========");
         verifier.verifyOutput();
-        System.out.println();
+        System.out.println("Done.\n");
     }
 
     private static void printHelp(Options options) {

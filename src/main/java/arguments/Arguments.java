@@ -14,8 +14,8 @@ public class Arguments {
     public Arguments(Options fullOptions) {
         this.fullOptions = fullOptions;
         isHelpCommand = false;
-        generateInput = true;
-        solveInput = true;
+        generateInput = false;
+        solveInput = false;
         verifyOutput = false;
     }
 

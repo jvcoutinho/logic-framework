@@ -43,6 +43,6 @@ public class ArgumentParser {
     }
 
     private static boolean isEmpty(CommandLine commandLine) {
-        return commandLine.getArgs().length == 0;
+        return commandLine.getOptions().length == 0;
     }
 }

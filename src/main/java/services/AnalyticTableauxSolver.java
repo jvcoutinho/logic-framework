@@ -7,8 +7,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import interfaces.Solver;
@@ -36,7 +34,8 @@ public class AnalyticTableauxSolver implements Solver {
                 String problem = problems.get(i);
                 outputFile.println("Problema #" + i);
                 outputFile.println(solveProblem(problem));
-                outputFile.println();
+                if(i < problems.size() - 1)
+                    outputFile.println();
             }
 
         } catch (IOException e) {

@@ -70,7 +70,7 @@ public class LogicFramework {
 
     public void verifyOutput() {
         System.out.println("VERIFYING OUTPUT");
-        System.out.println("=========");
+        System.out.println("================");
         verifier.verifyOutput();
         System.out.println("Done.\n");
     }

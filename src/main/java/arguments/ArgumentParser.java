@@ -18,7 +18,7 @@ public class ArgumentParser {
         options.addOption("h", "help", false, "Show possible commands.");
         options.addOption("g", "generate", false, "Generates a input.");
         options.addOption("s", "solve", false, "Solves a given input.");
-        options.addOption("c", "check", false, "Checks two outputs.");
+        options.addOption("v", "verify", false, "Verifies a output.");
         return options;
     }
 
@@ -36,7 +36,7 @@ public class ArgumentParser {
         boolean solveInput = commandLine.hasOption("s") || noArgumentsPassed;
         arguments.setSolveInput(solveInput);
 
-        boolean verifyOutput = commandLine.hasOption("c") || noArgumentsPassed;
+        boolean verifyOutput = commandLine.hasOption("v") || noArgumentsPassed;
         arguments.setVerifyOutput(verifyOutput);
 
         return arguments;

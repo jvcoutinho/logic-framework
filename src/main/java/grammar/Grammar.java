@@ -50,7 +50,7 @@ public class Grammar {
     public String generateWord(int threshold) {
 
         if (threshold == 0)
-            return "" + (char) (rand.nextInt('Z' - 'A') + 'A');
+            return "" + (char) (rand.nextInt('E' - 'A') + 'A');
 
         String word = "";
 

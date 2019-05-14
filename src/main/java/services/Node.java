@@ -154,7 +154,7 @@ public class Node {
     */
     public boolean checkContradiction() {
         for(Node it = this.parent; it != null; it = it.parent) {
-            if(it.expression.equals(this.expression) && it.truthValue != this.truthValue)
+            if((it.expression.equals(this.expression) && it.truthValue != this.truthValue) || it.isContradictory)
                 return true;
         }
         return false;
